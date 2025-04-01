@@ -1,12 +1,60 @@
-# React + Vite
+# 🚀 Portal de Pagos - Municipalidad de San Miguel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Frontend** del portal de pagos **Municipalidad de San Miguel**, desarrollado con **React 19**, **Vite**, y completamente dockerizado para facilitar su despliegue. 🏛️💳
 
-Currently, two official plugins are available:
+## 📦 Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Docker](https://www.docker.com/) 🐳
+- [Docker Compose](https://docs.docker.com/compose/) 🛠️
 
-## Expanding the ESLint configuration
+## 🚀 Instalación y Uso
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1️⃣ Configurar Variables de Entorno
+
+Copia el archivo `.env.example` y renómbralo como `.env`:
+
+```bash
+cp .env.example .env
+```
+
+### 2️⃣ Levantar el Proyecto 🚀
+
+Ejecuta el siguiente comando para construir y correr el proyecto en segundo plano:
+
+```bash
+docker-compose up --build -d
+```
+
+Esto hará lo siguiente:
+- Construirá la imagen de Docker 🏗️
+- Instalará las dependencias 📦
+- Levantará el contenedor con Vite y hot reload habilitado 🔥
+
+### 3️⃣ Acceder a la Aplicación 🌎
+
+Una vez que el contenedor esté corriendo, accede a:
+
+🔗 [http://localhost:5173](http://localhost:5173)
+
+## 🛑 Apagar el Proyecto
+
+Si necesitas apagar el contenedor, usa:
+
+```bash
+docker-compose down
+```
+
+Si además quieres borrar los volúmenes y caché de Docker:
+
+```bash
+docker-compose down -v
+```
+
+---
+
+## 🎯 Notas
+
+- Si los cambios en los archivos no se reflejan, asegúrate de que **hot reload** está habilitado en `vite.config.js`.
+- Si usas **WSL2 en Windows**, asegúrate de que los archivos se montan correctamente.
+
+¡Listo! Ahora tienes el **Portal de Pagos de la Municipalidad de San Miguel** corriendo en Docker con hot reload. 🚀🔥
